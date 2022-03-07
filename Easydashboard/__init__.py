@@ -1,0 +1,1 @@
+from .easydashboard import CreateDashboard
