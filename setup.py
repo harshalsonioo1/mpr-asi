@@ -1,5 +1,9 @@
 import setuptools
 
+with open("requirements.txt", "rt") as requirements_file:
+    requirements = list(filter(None, map(str.strip,
+                                         requirements_file.readlines())))
+    
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
@@ -8,19 +12,15 @@ setuptools.setup(
     packages=['easydashboard'],
     version='0.0.1',
     license='MIT',
-    description='Testing installation of Package',
+    description='Testing installation of EasyDashboard Package',
     long_description=long_description,
     long_description_content_type="text/markdown",
     author='Harshal Soni',
     author_email='arcadiahms@gmail.com',
-    url='https://github.com/Muls/toolbox_public',
-    project_urls = {
-        "Bug Tracker": "https://github.com/Muls/toolbox/issues"
-    },
-    install_requires=['requests'],
-
-    download_url="https://github.com/mike-huls/toolbox_public/archive/refs/tags/0.0.3.tar.gz",
+    url='https://github.com/harshalsonioo1/mpr-asi',
+    zip_safe=False,
     keywords=["pypi", "easydashboard", "tutorial"],
+    install_requires=requirements,
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',

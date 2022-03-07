@@ -1,0 +1,10 @@
+joblib
+numpy
+pandas>=1.1
+scikit-learn
+shap>=0.37
+pyyaml
+streamlit
+hydralit
+matplotlib
+seaborn
